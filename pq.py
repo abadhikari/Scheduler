@@ -1,5 +1,3 @@
-### In this assignment, we try to find and fix some bug in the implementation of the priority queue.
-
 class Entry:
     def __init__(self, item, priority):
         self.priority = priority
