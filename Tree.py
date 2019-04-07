@@ -13,7 +13,7 @@ class SubjectNode(BasicTreeNode):
     def __init__(self, name):
         # Add a color property to this class when we make the UI
         super.__init__(name)
-        # THIS LIST SHOULD BE SORTED
+        # THIS LIST SHOULD ALWAYS BE SORTED
         self.children = []
 
     def addChild(self, child):
@@ -53,7 +53,7 @@ class EventNode(BasicTreeNode):
         # When saving date to file, use date.isoformat()
 
     def getPriority(self):
-        return (self.priority, self.dateDue.toordinal())
+        return (self.priority, -1 * self.dateDue.toordinal())
 
     def changeDate(self, newDate):
         self.dateDue = newDate
